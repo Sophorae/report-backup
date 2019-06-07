@@ -1,0 +1,399 @@
+* {
+    padding: 0;
+    margin: 0
+}
+ul, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+html, body {
+    font-family: "Microsoft YaHei";
+}
+html.active, body.active {
+    height: 100%;
+    overflow-y: hidden;
+}
+.report-box {
+    width: 100%;
+    background: #f4f4f4;
+}
+.report-box, .report-box * {
+    box-sizing: border-box;
+}
+.report-box .title {
+    position: relative;
+    width: 100%;
+    height: 0.48rem;
+    font-size: 0.16rem;
+    text-align: center;
+    line-height: 0.48rem;
+    background: #ffffff;
+}
+.report-box .title .return {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.37rem;
+    height: 0.48rem;
+}
+.report-box .title .return::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0.18rem;
+    margin: auto 0;
+    width: 0.12rem;
+    height: 0.12rem;
+    border-left: 0.015rem solid #000000;
+    border-bottom: 0.015rem solid #000000;
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+}
+.report-box .report-content {
+    width: 100%;
+    font-family: "Microsoft YaHei";
+}
+.report-box .report-content .caption {
+    height: 0.27rem;
+    line-height: 0.27rem;
+    padding-left: 0.15rem;
+    font-size: 0.12rem;
+    color: #a6a6a6;
+}
+.report-box .report-content .report-reason {
+    padding: 0.2rem 0 0 0.15rem;
+    height: 2.02rem;
+    background: #ffffff;
+}
+.report-box .report-content .report-reason li {
+    float: left;
+    height: 0.3rem;
+    border-radius: 1rem;
+    margin: 0 0.14rem 0.14rem 0;
+}
+.report-box .report-content .report-reason li label {
+    box-sizing: content-box;
+    display: block;
+    padding: 0 0.14rem 0;
+    height: 0.3rem;
+    border-radius: 1rem;
+    font-size: 0.12rem;
+    color: #616373;
+    text-align: center;
+    line-height: 0.3rem;
+    background: #f6f6f7;
+}
+.report-box .report-content .report-reason li input[name="reason"] {
+    display: none;
+}
+.report-box .report-content .report-reason li input[name="reason"]:checked + label {
+    color: #fba316;
+    background: #fff7eb;
+}
+.report-box .phone-input {
+    position: relative;
+    margin: 0.1rem 0;
+    padding: 0 0.15rem;
+    background: #ffffff;
+}
+.report-box .phone-input .reset {
+    position: absolute;
+    display: none;
+    width: 0.17rem;
+    height: 0.17rem;
+    background: #dddddd;
+    border-radius: 0.17rem;
+    z-index: 1;
+}
+.report-box .phone-input .reset::before {
+    content: '';
+    position: absolute;
+    top: 0.06rem;
+    left: 0.03rem;
+    width: 0.04rem;
+    height: 0.04rem;
+    border-top: 0.01rem solid #ffffff;
+    border-right: 0.01rem solid #ffffff;
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+}
+.report-box .phone-input .reset::after {
+    content: '';
+    position: absolute;
+    top: 0.06rem;
+    right: 0.03rem;
+    width: 0.04rem;
+    height: 0.04rem;
+    border-bottom: 0.01rem solid #ffffff;
+    border-left: 0.01rem solid #ffffff;
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+}
+.report-box .phone-input .phone-box.active {
+    border-bottom: 0.01rem solid #f4f6f7;
+}
+.report-box .phone-input .phone-box #phone {
+    display: block;
+    padding-right: 0.17rem;
+    width: 100%;
+    height: 0.5rem;
+    font-size: 0.14rem;
+    font-family: "Microsoft YaHei";
+    border: none;
+    outline: none;
+}
+.report-box .phone-input .phone-box #phone:input-placeholder {
+    color: #e0e0e2;
+}
+.report-box .phone-input .phone-box #phone::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #e0e0e2;
+}
+.report-box .phone-input .phone-box #phone:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #e0e0e2;
+}
+.report-box .phone-input .phone-box #phone::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #e0e0e2;
+}
+.report-box .phone-input .phone-box #phone:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #e0e0e2;
+}
+.report-box .phone-input .code-box {
+    display: none;
+}
+.report-box .phone-input .code-box #code {
+    display: block;
+    padding-right: 1.15rem;
+    width: 100%;
+    height: 0.5rem;
+    font-size: 0.14rem;
+    font-family: "Microsoft YaHei";
+    border: none;
+    outline: none;
+}
+.report-box .phone-input .code-box #code:input-placeholder {
+    color: #e0e0e2;
+}
+.report-box .phone-input .code-box #code::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #e0e0e2;
+}
+.report-box .phone-input .code-box #code:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #e0e0e2;
+}
+.report-box .phone-input .code-box #code::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #e0e0e2;
+}
+.report-box .phone-input .code-box #code:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #e0e0e2;
+}
+.report-box .phone-input .code-box .get-code {
+    position: absolute;
+    top: 0.64rem;
+    right: 0.15rem;
+    width: 0.78rem;
+    height: 0.24rem;
+    text-align: center;
+    font-size: 0.12rem;
+    line-height: 0.22rem;
+    color: #fba316;
+    border: 0.01rem solid #fba316;
+    border-radius: 0.04rem;
+}
+.report-box .phone-input .code-box .get-code.active {
+    color: #cccccc;
+    border: 0.01rem solid #cccccc;
+}
+.report-box .phone-input .phone-box .reset-phone {
+    top: 0.17rem;
+    right: 0.15rem;
+}
+.report-box .phone-input .code-box .reset-code {
+    top: 0.69rem;
+    right: 1.13rem;
+}
+.report-box .report-other {
+    height: 1.49rem;
+    padding: 0 0.15rem 0 0.15rem;
+    background: #ffffff;
+}
+.report-box .report-other #other {
+    display: block;
+    padding-top: 0.15rem;
+    width: 100%;
+    height: 1.15rem;
+    font-size: 0.14rem;
+    font-family: "Microsoft YaHei";
+    color: #464646;
+    line-height: 0.22rem;
+    border: none;
+    outline: none;
+    border-bottom: 0.01rem solid #f4f6f7;
+}
+.report-box .report-other #other:input-placeholder {
+    color: #e0e0e2;
+}
+.report-box .report-other #other::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #e0e0e2;
+}
+.report-box .report-other #other:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #e0e0e2;
+}
+.report-box .report-other #other::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #e0e0e2;
+}
+.report-box .report-other #other:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #e0e0e2;
+}
+.report-box .report-other p {
+    height: 0.33rem;
+    text-align: right;
+    line-height: 0.33rem;
+    font-size: 0.12rem;
+    color: #d2d2d2;
+}
+.report-box .report-other p .count {
+    color: #9f9f9f;
+}
+.report-box .report-handle {
+    position: relative;
+    height: 1.46rem;
+}
+.report-box .report-handle #report-submit {
+    position: absolute;
+    top: 0.3rem;
+    left: 0.36rem;
+    width: 84%;
+    height: 0.46rem;
+    font-size: 0.17rem;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 0.08rem;
+    box-shadow: 0 0.05rem 0.125rem 0 #f7c989;
+    background: -webkit-linear-gradient(left, #FF9100 , #FFBB4D ); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #FF9100, #FFBB4D ); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #FF9100, #FFBB4D ); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #FF9100 , #FFBB4D ); /* 标准的语法 */
+}
+.report-box .report-handle .tips {
+    position: absolute;
+    top: 0.89rem;
+    width: 100%;
+    font-size: 0.10rem;
+    line-height: 0.16rem;
+    color: #b6b7b7;
+    text-align: center;
+    transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -o-transform: scale(0.9);
+}
+@media screen and (max-width: 320px) {
+    .report-box .report-handle .tips {
+        transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        -moz-transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+        -o-transform: scale(0.8);
+    }
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: rgba(2, 3, 23, 0.30);
+}
+.popup .popup-window {
+    position: absolute;
+    top: 1.75rem;
+    left: 50%;
+    margin-left: -1.475rem;
+    width: 2.95rem;
+    height: 2.28rem;
+    background: #ffffff;
+    border-radius: 0.08rem;
+}
+.popup .popup-window .popup-close {
+    position: absolute;
+    top: 0.18rem;
+    right: 0.18rem;
+    width: 0.18rem;
+    height: 0.18rem;
+    background: url(./closed@2x.png);
+    background-size: 0.18rem 0.18rem;
+}
+.popup .popup-window .popup-img {
+    position: absolute;
+    top: 0.2rem;
+    left: 50%;
+    margin-left: -0.47rem;
+    width: 0.94rem;
+    height: 0.94rem;
+}
+.popup .popup-window .popup-text {
+    position: absolute;
+    top: 1.12rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.17rem;
+    font-family: "Microsoft YaHei";
+    line-height: 0.24rem;
+}
+.popup .popup-window .browse-other {
+    position: absolute;
+    top: 1.56rem;
+    left: 50%;
+    margin-left: -0.91rem;
+    width: 1.82rem;
+    height: 0.42rem;
+    text-align: center;
+    font-size: 0.17rem;
+    line-height: 0.42rem;
+    color: #ffffff;
+    border-radius: 0.08rem;
+    background: -webkit-linear-gradient(left, #FF9100 , #FFBB4D ); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #FF9100, #FFBB4D ); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #FF9100, #FFBB4D ); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #FF9100 , #FFBB4D ); /* 标准的语法 */
+}
+.message-box {
+    display: none;
+    position: fixed;
+    top: 2.27rem;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+.message-box .message-text {
+    box-sizing: content-box;
+    margin-left: 50%;
+    padding: 0.12rem 0.18rem;
+    max-width: 2.76rem;
+    font-size: 0.14rem;
+    color: #fff;
+    line-height: 0.24rem;
+    background: rgba(2, 3, 23, 0.75);
+    border-radius: 0.08rem;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}

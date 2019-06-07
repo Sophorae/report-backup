@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>report</title>
+    <link rel="stylesheet" href="./2.css">
+    <script>
+        ;(function(_D) {
+            var _self = {};
+            _self.resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            _self.Html = _D.getElementsByTagName("html")[0];
+            _self.widthProportion = function() {
+                var p = Number((_D.body && _D.body.clientWidth || _self.Html.offsetWidth) / 375).toFixed(3);
+                return p > 2.731 ? 2.731 : p < 0.853 ? 0.853 : p;
+            };
+            _self.changePage = function() {
+                _self.Html.setAttribute("style", "font-size:" + _self.widthProportion() * 100 + "px");
+            };
+            _self.changePage();
+            if (!document.addEventListener) return;
+            window.addEventListener(_self.resizeEvt, _self.changePage, false);
+            document.addEventListener('DOMContentLoaded',  _self.changePage, false);
+        })(document);
+    </script>
+</head>
+<body>
+    <div class="report-box">
+        <header class="title">
+            <div class="return"></div>
+            车源举报
+        </header>
+        <section class="report-content">
+            <div class="caption">举报原因（必选）</div>
+            <ul class="report-reason">
+                <li>
+                    <input id="reason1" type="radio" name="reason" value="车源已售">
+                    <label for="reason1">车源已售</label>
+                </li>
+                <li>
+                    <input id="reason2" type="radio" name="reason" value="图片与车况不符">
+                    <label for="reason2">图片与车况不符</label>
+                </li>
+                <li>
+                    <input id="reason3" type="radio" name="reason" value="骗取定金">
+                    <label for="reason3">骗取定金</label>
+                </li>
+                <li>
+                    <input id="reason4" type="radio" name="reason" value="异地看车">
+                    <label for="reason4">异地看车</label>
+                </li>
+                <li>
+                    <input id="reason5" type="radio" name="reason" value="无法过户">
+                    <label for="reason5">无法过户</label>
+                </li>
+                <li>
+                    <input id="reason6" type="radio" name="reason" value="车辆不存在">
+                    <label for="reason6">车辆不存在</label>
+                </li>
+                <li>
+                    <input id="reason7" type="radio" name="reason" value="推荐其他车款">
+                    <label for="reason7">推荐其他车款</label>
+                </li>
+                <li>
+                    <input id="reason8" type="radio" name="reason" value="联系电话虚假">
+                    <label for="reason8">联系电话虚假</label>
+                </li>
+                <li>
+                    <input id="reason9" type="radio" name="reason" value="套牌/走私车">
+                    <label for="reason9">套牌/走私车</label>
+                </li>
+                <li>
+                    <input id="reason10" type="radio" name="reason" value="其他">
+                    <label for="reason10">其他</label>
+                </li>
+            </ul>
+        </section>
+        <section class="phone-input">
+            <p class="phone-box">
+                <input id="phone" type="tel" name="phone" autocomplete="off" maxlength="13" placeholder="请输入手机号码，加速审核" >
+                <a class="reset reset-phone" href="javascript:;"></a>
+            </p>
+            <p class="code-box">
+                <input id="code" type="text" name="code" autocomplete="off" maxlength="6" placeholder="请输入验证码">
+                <a class="reset reset-code" href="javascript:;"></a>
+                <a class="get-code" href="javascript:;">获取验证码</a>
+            </p>
+        </section>
+        <section class="report-other">
+            <textarea maxlength="100" name="other" placeholder="简要描述你的举报问题（选填）" id="other" cols="4" style="resize: none;"></textarea>
+            <p><span class="count">0</span>/100</p>
+        </section>
+        <section class="report-handle">
+            <button id="report-submit">提交</button>
+            <p class="tips">举报后我们会进行审核，如情节严重该车源将会被下架处理</p>
+        </section>
+    </div>
+    <div class="popup">
+        <div class="popup-window">
+            <div class="popup-close"></div>
+            <img class="popup-img" src="./finsh@2x.png" alt="">
+            <p class="popup-text">提交成功</p>
+            <a class="browse-other" href="./1.html">浏览其他车源</a>
+        </div>
+    </div>
+    <div class="message-box">
+        <div class="message-text">未知错误</div>
+    </div>
+    <script src="./jquery.js"></script>
+    <script src="./2.js"></script>
+</body>
+</html>
